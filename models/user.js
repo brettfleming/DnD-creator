@@ -16,7 +16,7 @@ User.init(
             type: DataTypes.STRING,
             allowNull: false
         },
-        email: {
+        user_email: {
             type: DataTypes.STRING,
             allowNull: false,
             unique: true,
@@ -24,7 +24,7 @@ User.init(
                 isEmail: true,
             },
         },
-        password: {
+        user_password: {
             type: DataTypes.STRING,
             allowNull: false,
             validate: {

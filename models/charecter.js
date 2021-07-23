@@ -1,7 +1,8 @@
 const {Model, DataTypes} =require("sequelize");
+const {  Character } = require(".");
 const sequelize = require("../config/connection");
 
-class Charecter extends Model {}
+class  Character extends Model {}
 
 Charecter.init(
     {
@@ -11,22 +12,22 @@ Charecter.init(
             primaryKey: true,
             autoIncrement: true
         },
-        cahrecter_name: {
+        character_name: {
             type: DataTypes.STRING,
             allowNull: false
         }, 
-        background: {
+        character_background: {
             type: DataTypes.STRING
         },
-        race: {
+        character_race: {
             type: DataTypes.STRING,
             allowNull: false
         },
-        alignment: {
+        character_alignment: {
             type: DataTypes.STRING,
             allowNull: false
         },
-        class: {
+        character_class: {
             type: DataTypes.STRING,
             allowNull: false
         },
@@ -39,6 +40,10 @@ Charecter.init(
             allowNull: false
         },
         chr: {
+            type: DataTypes.INTEGER,
+            allowNull: false
+        },
+        cons: {
             type: DataTypes.INTEGER,
             allowNull: false
         },
@@ -67,4 +72,4 @@ Charecter.init(
         }
 );
 
-module.exports = Charecter
+module.exports =   Character
