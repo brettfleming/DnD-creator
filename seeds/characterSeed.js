@@ -1,10 +1,10 @@
-const { Character, Charecter } = require("../models");
+const { Character} = require("../models");
 
 const characterData = [
     {
         character_name: "Beavis",
         character_background: "Reel swell dood",
-        charachter_race: "Dragonborn",
+        character_race: "Dragonborn",
         character_alignment: "Chaotic Evil", 
         character_class: "Barbarian",
         str: 9,
@@ -18,7 +18,7 @@ const characterData = [
     {
         character_name: "Butthead",
         character_background: "Doesn't smell great",
-        charachter_race: "tiefling",
+        character_race: "tiefling",
         character_alignment: "Neutral", 
         character_class: "Paladin",
         str: 9,
@@ -32,7 +32,7 @@ const characterData = [
     {
         character_name: "Chairface",
         character_background: "Has poor personal hygeine",
-        charachter_race: "Fighter",
+        character_race: "Fighter",
         character_alignment: "Neutral Good", 
         character_class: "Rogue",
         str: 11,
@@ -46,7 +46,7 @@ const characterData = [
     {
         character_name: "Tick",
         character_background: "Is wanted on numerous felony counts",
-        charachter_race: "druid",
+        character_race: "druid",
         character_alignment: "Chaotic Good", 
         character_class: "Sorcerer",
         str: 10,
@@ -79,7 +79,7 @@ const characterData = [
         character_class: "bard",
         str: 4,
         dex: 12,
-        character_charisma: 12,
+        chr: 12,
         cons: 12, 
         int: 13,
         wis: 14,
@@ -120,8 +120,8 @@ const characterData = [
         character_alignment: "Chaotic Neutral", 
         character_class: "Fighter",
         str: 8,
-        dex: "8",
-        chr: "11",
+        dex: 8,
+        chr: 11,
         cons: 12, 
         int: 12,
         wis: 16,
@@ -130,7 +130,7 @@ const characterData = [
     {
         character_name: "Bender",
         character_background: "Has VERY poor posture",
-        charachter_race: "gnome",
+        character_race: "gnome",
         character_alignment: "Lawful Evil", 
         character_class: "druid",
         str: 9,
@@ -143,6 +143,6 @@ const characterData = [
     }
 ]
 
-const seedCharacter = () => Charecter.bulkCreate(characterData);
+const seedCharacters = () => Character.bulkCreate(characterData);
 
-module.exports = seedCharacter;
+module.exports = seedCharacters;

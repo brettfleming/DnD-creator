@@ -19,7 +19,7 @@ const userData = [
     },
     {
         user_name: "tBrady",
-        user_email: "tb@ohiostatemustbedestroyed.org",
+        user_email: "td@ohiostatemustbedestroyed.org",
         user_password: "Brady1234"
     },
     {
@@ -29,7 +29,7 @@ const userData = [
     },
     {
         user_name: "tBiakabatuka",
-        user_email: "tb@ohiostatemustbedestroyed.org",
+        user_email: "fds@ohiostatemustbedestroyed.org",
         user_password: "Biakabatuka1234"
     },
     {

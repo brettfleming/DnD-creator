@@ -1,8 +1,8 @@
 const {Model, DataTypes} =require("sequelize");
-const {  Character } = require(".");
 const sequelize = require("../config/connection");
 
-class Character extends Model {}
+
+class  Character extends Model {}
 
 Character.init(
     {
@@ -72,4 +72,4 @@ Character.init(
         }
 );
 
-module.exports = Character
+module.exports =   Character
