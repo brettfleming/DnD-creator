@@ -2,9 +2,13 @@ const {Model, DataTypes} =require("sequelize");
 const {  Character } = require(".");
 const sequelize = require("../config/connection");
 
+<<<<<<< HEAD:models/charecter.js
 class  Character extends Model {}
+=======
+class Character extends Model {}
+>>>>>>> 54e7e2646e45ca3ace96588a03b1a4dd321fa74b:models/character.js
 
-Charecter.init(
+Character.init(
     {
         id: {
             type:DataTypes.INTEGER,
@@ -68,8 +72,12 @@ Charecter.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: "charecter",
+        modelName: "character",
         }
 );
 
+<<<<<<< HEAD:models/charecter.js
 module.exports =   Character
+=======
+module.exports = Character
+>>>>>>> 54e7e2646e45ca3ace96588a03b1a4dd321fa74b:models/character.js

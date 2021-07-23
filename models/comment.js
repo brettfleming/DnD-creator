@@ -23,10 +23,10 @@ Comment.init(
                 key: "id",
             },
         },
-        charecter_id: {
+        character_id: {
             type: DataTypes.INTEGER,
             references: {
-                model: "charecter",
+                model: "character",
                 key: "id"
             }
         }

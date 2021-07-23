@@ -4,7 +4,7 @@
 
 const findThings = () => {
 
-    fetch("https://www.dnd5eapi.co/api/races")
+    fetch("https://www.dnd5eapi.co/api/monsters/fire-elemental")
         .then(function (response) {
             if (!response.ok) {
                 return console.log(response);
@@ -12,7 +12,7 @@ const findThings = () => {
             return response.json();
         })
         .then(function (data) {
-            
+            console.log(data)
         })
 }
 const findRaces = () => {
