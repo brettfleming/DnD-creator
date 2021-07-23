@@ -5,6 +5,7 @@ USE dnd_db;
 CREATE TABLE users (
     user_id INT NOT NULL AUTO_INCREMENT,
     user_name VARCHAR(30) NOT NULL,
+    user_email VARCHAR(10) NOT NULL,
     user_pword VARCHAR(30) NOT NULL,
     PRIMARY KEY (user_id)
 );
