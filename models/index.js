@@ -17,7 +17,7 @@ Character.belongsTo(User, {
 });
 
 Character.hasMany(Comment, {
-    foreignKey: "Character_id",
+    foreignKey: "character_id",
     onDelete: "CASCADE"
 });
 
@@ -26,7 +26,7 @@ Comment.belongsTo(User, {
 });
 
 Comment.belongsTo(Character, {
-    foreignKey: "Character_id"
+    foreignKey: "character_id"
 });
 
 module.exports = {Character, Comment, User}
