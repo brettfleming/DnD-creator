@@ -1,9 +1,9 @@
 [
     {
-        "charachter_id": "1",
+        "character_id": "1",
         "character_name": "Beavis",
         "character_background": "Reel swell dood",
-        "charachter_race": "Dragonborn",
+        "character_race": "Dragonborn",
         "character_alignment": "Chaotic Evil", 
         "character_class": "Barbarian",
         "character_strength": "9",
@@ -15,10 +15,10 @@
         "user_ID": "8"
     },
     {
-        "charachter_id": "2",
+        "character_id": "2",
         "character_name": "Butthead",
         "character_background": "Doesn't smell great",
-        "charachter_race": "tiefling",
+        "character_race": "tiefling",
         "character_alignment": "Neutral", 
         "character_class": "Paladin",
         "character_strength": "9",
@@ -30,10 +30,10 @@
         "user_ID": "4"
     },
     {
-        "charachter_id": "3",
+        "character_id": "3",
         "character_name": "Chairface",
         "character_background": "Has poor personal hygeine",
-        "charachter_race": "Fighter",
+        "character_race": "Fighter",
         "character_alignment": "Neutral Good", 
         "character_class": "Rogue",
         "character_strength": "11",
@@ -45,10 +45,10 @@
         "user_ID": "5"
     },
     {
-        "charachter_id": "4",
+        "character_id": "4",
         "character_name": "Tick",
         "character_background": "Is wanted on numerous felony counts",
-        "charachter_race": "druid",
+        "character_race": "druid",
         "character_alignment": "Chaotic Good", 
         "character_class": "Sorcerer",
         "character_strength": "10",
@@ -60,10 +60,10 @@
         "user_ID": "6"
     },
     {
-        "charachter_id": "5",
+        "character_id": "5",
         "character_name": "Arthur",
         "character_background": "Has no grip on reality whatsoever",
-        "charachter_race": "half-elf",
+        "character_race": "half-elf",
         "character_alignment": "Lawful Neutral", 
         "character_class": "Monk",
         "character_strength": "7",
@@ -75,10 +75,10 @@
         "user_ID": "1"
     },
     {
-        "charachter_id": "6",
+        "character_id": "6",
         "character_name": "Fry",
         "character_background": "Literally voted for Donald Trump",
-        "charachter_race": "elf",
+        "character_race": "elf",
         "character_alignment": "Chaotic Evil", 
         "character_class": "bard",
         "character_strength": "4",
@@ -90,10 +90,10 @@
         "user_ID": "9"
     },
     {
-        "charachter_id": "7",
+        "character_id": "7",
         "character_name": "Leela",
         "character_background": "Has gigantic effing feet",
-        "charachter_race": "Dragonborn",
+        "character_race": "Dragonborn",
         "character_alignment": "Lawful Good", 
         "character_class": "cleric",
         "character_strength": "8",
@@ -105,10 +105,10 @@
         "user_ID": "2"
     },
     {
-        "charachter_id": "8",
+        "character_id": "8",
         "character_name": "Hermes",
         "character_background": "Looks like spiders is meeting on his head",
-        "charachter_race": "human",
+        "character_race": "human",
         "character_alignment": "Neutral Evil", 
         "character_class": "Ranger",
         "character_strength": "8",
@@ -120,10 +120,10 @@
         "user_ID": "7"
     },
     {
-        "charachter_id": "9",
+        "character_id": "9",
         "character_name": "Amy",
         "character_background": "Can eff RIGHT off",
-        "charachter_race": "gnome",
+        "character_race": "gnome",
         "character_alignment": "Chaotic Neutral", 
         "character_class": "Fighter",
         "character_strength": "8",
@@ -135,10 +135,10 @@
         "user_ID": "3"
     },
     {
-        "charachter_id": "10",
+        "character_id": "10",
         "character_name": "Bender",
         "character_background": "Has VERY poor posture",
-        "charachter_race": "gnome",
+        "character_race": "gnome",
         "character_alignment": "Lawful Evil", 
         "character_class": "druid",
         "character_strength": "9",
