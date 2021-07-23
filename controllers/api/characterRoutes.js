@@ -1,6 +1,27 @@
 const router = require('express').Router();
-const { Character } = require('../../models');
+const { Character, User } = require('../../models');
 const withAuth = require('../../utils/auth');
+
+
+router.get('/', async (req, res) => {
+  try {
+    const characterData = await Character.findAll({
+      include: [
+        {
+          model: User,
+          attributes: ['user_name'],
+        },
+      ],
+    });
+    const characters = characterData.map((character) => character.get({ plain: true }));
+
+    res.json({ characters: characters});
+
+  } catch (err) {
+    console.log(err)
+    res.status(500).json(err);
+  }
+});
 
 router.post('/', withAuth, async (req, res) => {
     try {
