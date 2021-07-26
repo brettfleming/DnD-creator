@@ -6,15 +6,15 @@ const loginFormHandler = async (event) => {
   if (email && password) {
     const response = await fetch('/api/users/login', {
       method: 'POST',
-      body: JSON.stringify({ user_email, user_password }),
+      body: JSON.stringify({ email, password }),
       headers: { 'Content-Type': 'application/json' },
     });
 
-    // if (response.ok) {
-    //   document.location.replace('/profile');
-    // } else {
-    //   alert(response.statusText);
-    // }
+    if (response.ok) {
+      document.location.replace('/profile');
+    } else {
+      alert(response.statusText);
+    }
   }
 };
 
