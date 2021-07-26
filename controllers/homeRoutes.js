@@ -23,27 +23,27 @@ router.get('/', async (req, res) => {
   }
 });
 
-// router.get('/character/:id', async (req, res) => {
-//   try {
-//     const characterData = await character.findByPk(req.params.id, {
-//       include: [
-//         {
-//           model: User,
-//           attributes: ['name'],
-//         },
-//       ],
-//     });
+router.get('/character/:id', async (req, res) => {
+  try {
+    const characterData = await Character.findByPk(req.params.id, {
+      include: [
+        {
+          model: User,
+          attributes: ['user_name'],
+        },
+      ],
+    });
 
-//     const character = characterData.get({ plain: true });
+    const character = characterData.get({ plain: true });
 
-//     res.render('character', {
-//       ...character,
-//       logged_in: req.session.logged_in
-//     });
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
+    res.render('character', {
+      ...character,
+      logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 router.get('/profile', withAuth, async (req, res) => {
   try {
     const userData = await User.findByPk(req.session.user_id, {
@@ -52,9 +52,16 @@ router.get('/profile', withAuth, async (req, res) => {
     });
 
     const user = userData.get({ plain: true });
+    console.log(user)
 
+    const newUserData = {...user.characters[0]}
+    console.log(newUserData)
+    newUserData.user_name = user.user_name
+    req.session.save(() => {
+      req.session.character_name = userData.character_name
+    })
     res.render('profile', {
-      ...user,
+      ...newUserData,
       logged_in: true
     });
   } catch (err) {
