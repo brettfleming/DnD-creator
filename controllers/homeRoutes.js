@@ -12,8 +12,8 @@ router.get('/', async (req, res) => {
         },
       ],
     });
-    const character = characterData.map((character) => character.get({ plain: true }));
-
+    const characters = characterData.map((character) => character.get({ plain: true }));
+    console.log(characters)
     res.render('homepage', { 
       character, 
       logged_in: req.session.logged_in 
@@ -31,6 +31,10 @@ router.get('/character/:id', async (req, res) => {
           model: User,
           attributes: ['user_name'],
         },
+        // {
+        //   model: Comment,
+        //   attributes: ["comment_text"]
+        // }
       ],
     });
 
