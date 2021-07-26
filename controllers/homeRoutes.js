@@ -52,16 +52,16 @@ router.get('/profile', withAuth, async (req, res) => {
     });
 
     const user = userData.get({ plain: true });
-    console.log(user)
+    // console.log(user)
 
-    const newUserData = {...user.characters[0]}
-    console.log(newUserData)
-    newUserData.user_name = user.user_name
+    // const newUserData = {...user.characters[0]}
+    // console.log(newUserData)
+    // newUserData.user_name = user.user_name
     req.session.save(() => {
       req.session.character_name = userData.character_name
     })
     res.render('profile', {
-      ...newUserData,
+      ...user,
       logged_in: true
     });
   } catch (err) {

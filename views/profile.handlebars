@@ -1,20 +1,51 @@
+<div class="row">
+  <div class="col-auto">
+    <h2>Welcome, {{user_name}}!</h2>
+  </div>
+</div>
 
-<div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
-  <div class="card-header">{{user_name}}</div> {{! User's name}}
-  <div class="card-body">
-    <h5 class="card-title">{{character_name}}</h5> {{! Created character's name}}
-    <p class="card-text">{{character_background}}: </p>
-    <p class="card-text">Race: {{character_race}} </p>
-    <p class="card-text">Alignment: {{character_alignment}} </p>
-    <p class="card-text">Class: {{character_class}} </p>
-    <p class="card-text">Strength: {{str}} </p>
-    <p class="card-text">Dexterity: {{dex}} </p>
-    <p class="card-text">Charisma: {{chr}} </p>
-    <p class="card-text">Consitution: {{cons}} </p>
-    <p class="card-text">Intelligence: {{int}} </p>
-    <p class="card-text">Wisdom: {{wis}} </p>
+{{!-- <div class="row mt-4">
+  <div class="col-md-6">
+    <h3>Create a New character:</h3>
+
+    <form class="form new-project-form">
+      <div class="form-group">
+        <label for="project-name">project name:</label>
+        <input class="form-input" type="text" id="project-name" name="project-name" />
+      </div>
+      <div class="form-group">
+        <label for="project-funding">needed funding ($):</label>
+        <input class="form-input" type="number" id="project-funding" name="project-funding" />
+      </div>
+      <div class="form-group">
+        <label for="project-desc">description:</label>
+        <textarea class="form-input" id="project-desc" name="project-desc"></textarea>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Create</button>
+      </div>
+    </form>
+  </div> --}}
+
+  {{#if characters.length}}
+  <div class="col-md-6 project-list">
+    <h3>Current character:</h3>
+
+    {{#each characters as |character|}}
+    <div class="row mb-2">
+      <div class="col-md-8">
+        <h4><a href="/character/{{character.id}}">{{character.character_name}}</a></h4>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-sm btn-danger" data-id="{{character.id}}">DELETE</button>
+      </div>
+    </div>
+    {{/each}}
   </div>
 </div>
 <div>
   <button><a href="/create">Create</a></button>
 </div>
+  {{/if}}
+</div>
+<script src="./js/profile.js"></script>
