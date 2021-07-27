@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { Character, User } = require('../models');
 const withAuth = require('../utils/auth');
+const fetch = require('node-fetch');
 
 router.get('/', async (req, res) => {
   try {
@@ -73,7 +74,36 @@ router.get('/create', (req, res) => {
     return;
 })
 router.get('/monster', (req, res) => {
-    res.render('monster');
+    res.render('monsterSearch');
+    return;
+})
+router.get('/monster/:monsterName', async (req, res) => {
+    let monsterData = await fetch(`https://www.dnd5eapi.co/api/monsters/${req.params.monsterName}`)
+    monsterData = await monsterData.json();
+    console.log(monsterData);
+
+    //modify object data as needed before sending into handlebars
+    monsterData.condition_immunities = monsterData.condition_immunities.reduce((finalStr, inputObj) => {
+      return finalStr += `${inputObj.name}, `
+    }, "")
+    monsterData.condition_immunities = monsterData.condition_immunities.slice(0, monsterData.condition_immunities.length - 2);
+    
+    monsterData.damage_immunities = monsterData.damage_immunities.reduce((finalStr, inputStr) => {
+      return finalStr += `${inputStr}, `
+    }, "")
+    monsterData.damage_immunities = monsterData.damage_immunities.slice(0, monsterData.damage_immunities.length - 2);
+    
+    monsterData.damage_resistances = monsterData.damage_resistances.reduce((finalStr, inputStr) => {
+      return finalStr += `${inputStr}, `
+    }, "")
+    monsterData.damage_resistances = monsterData.damage_resistances.slice(0, monsterData.damage_resistances.length - 2);
+    
+    monsterData.damage_vulnerabilities = monsterData.damage_vulnerabilities.reduce((finalStr, inputStr) => {
+      return finalStr += `${inputStr}, `
+    }, "")
+    monsterData.damage_vulnerabilities = monsterData.damage_vulnerabilities.slice(0, monsterData.damage_vulnerabilities.length - 2);
+
+    res.render('monster', monsterData);
     return;
 })
 
