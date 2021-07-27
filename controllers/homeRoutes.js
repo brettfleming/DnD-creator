@@ -40,15 +40,15 @@ router.get('/character/:id', async (req, res) => {
           model: User,
           attributes: ['user_name'],
         },
-        // {
-        //   model: Comment,
-        //   attributes: ["comment_text"]
-        // }
+        {
+          model: Comment,
+          attributes: ["comment_text"]
+        }
       ],
     });
 
     const character = characterData.get({ plain: true });
-
+    console.log(character);
     res.render('character', {
       ...character,
       logged_in: req.session.logged_in
