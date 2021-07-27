@@ -11,17 +11,17 @@ router.get('/', async (req, res) => {
           model: User,
           attributes: ['user_name'],
         },
-        // {
-        //   model: Comment,
-        //   attributes: ["comment_text"]
-        // }
+        {
+          model: Comment,
+          attributes: ["comment_text"]
+        }
       ],
 
     });
-    console.log( characterData)
+    // console.log( characterData)
     
     const character = characterData.map((character) => character.get({ plain: true }));
-    console.log(character)
+    console.log(character[0].comments)
     res.render('homepage', { 
       character, 
       logged_in: req.session.logged_in 
