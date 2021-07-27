@@ -2,7 +2,7 @@ DROP DATABASE IF EXISTS dnd_db;
 CREATE DATABASE dnd_db;
 USE dnd_db;
 
-CREATE TABLE users (
+CREATE TABLE user (
     user_id INT NOT NULL AUTO_INCREMENT,
     user_name VARCHAR(30) NOT NULL,
     user_email VARCHAR(10) NOT NULL,
@@ -10,7 +10,7 @@ CREATE TABLE users (
     PRIMARY KEY (user_id)
 );
 
-CREATE TABLE comments (
+CREATE TABLE comment (
 	comment_id INT NOT NULL AUTO_INCREMENT,
 	user_id INT NOT NULL REFERENCES user(user_id),
 	comment_body VARCHAR(100) NOT NULL,
@@ -18,7 +18,7 @@ CREATE TABLE comments (
 	PRIMARY KEY (comment_id)
 );
 
-CREATE TABLE characters (
+CREATE TABLE character (
 	character_id INT NOT NULL AUTO_INCREMENT,
 	character_name VARCHAR(10) NOT NULL,
 	character_background VARCHAR(20) NULL,

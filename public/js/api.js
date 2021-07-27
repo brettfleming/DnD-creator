@@ -4,19 +4,19 @@ const selectTag3 = document.getElementById('character_alignment');
 
 
 
-// const findThings = () => {
+const findThings = () => {
 
-//     fetch("https://www.dnd5eapi.co/api/monsters/fire-elemental")
-//         .then(function (response) {
-//             if (!response.ok) {
-//                 return console.log(response);
-//             }
-//             return response.json();
-//         })
-//         .then(function (data) {
-//             console.log(data)
-//         })
-// }
+    fetch("https://www.dnd5eapi.co/api/monsters/animated-armor")
+        .then(function (response) {
+            if (!response.ok) {
+                return console.log(response);
+            }
+            return response.json();
+        })
+        .then(function (data) {
+            console.log(data)
+        })
+}
 const findRaces = () => {
 
     fetch("https://www.dnd5eapi.co/api/races")
@@ -87,7 +87,7 @@ const findAlignment = () => {
             });
         })
 }
-// findThings();
-findRaces();
-findClasses();
-findAlignment();
+findThings();
+// findRaces();
+// findClasses();
+// findAlignment();
