@@ -19,3 +19,24 @@ header h1{
 #topcolumncontainer {
     display: inline-flex;
 }
+
+#ms li {
+    font-size: x-large
+}
+
+#searchresultname {
+    font-family: 'MedievalSharp', cursive;
+    color: black;
+    font-size: 5em;
+}
+
+.inputlabels {
+    font-size: xx-large;
+    padding-bottom: 1vh;
+}
+
+#homepagecards {
+    font-family: 'MedievalSharp', cursive;
+    color: rgba(153, 22, 22, 0.856);
+    font-size: 2em;
+}
