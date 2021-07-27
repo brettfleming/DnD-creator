@@ -5,12 +5,16 @@
     </form>
 </div>
 <div id='search-results'>
-    <div>
-      <h1 id='name'>{{name}}</h1>
-      <h2 id='type'>{{type}}, {{alignment}}</h2>
-    </div>
+  
+    
+  <div id="monstertitleuser">
+    <h1 id='name'>{{name}}</h1>
+    <h2 id='type'>{{type}}, {{alignment}}</h2>
+  </div>
 
-    <div>
+  <div class="col-12" id="topcolumncontainer">
+
+    <div class="col-2" id="toprowleft">
       <div>
         <h4>Armor Class</h4>
         <p id='ac'>{{armor_class}}</p>
@@ -23,36 +27,37 @@
         <h4>Speed</h4>
         <p id='speed'>{{speed.walk}}</p>
       </div>
-
-    <div> 
-        <h4>Monster stats</h4>
-            <ul id='ms'>
-                <li>Str: {{strength}}</li>
-                <li>Cha: {{charisma}}</li>
-                <li>Dex: {{dexterity}}</li>
-                <li>Cons: {{constitution}}</li>
-                <li>Int: {{intelligence}}</li>
-                <li>Wis: {{wisdom}}</li>
-                
-            </ul>
+    </div>
+  
+    <div class="col-2" id="toprow2">
+      <h4>Monster stats</h4>
+        <ul id='ms'>
+            <li>Str: {{strength}}</li>
+            <li>Cha: {{charisma}}</li>
+            <li>Dex: {{dexterity}}</li>
+            <li>Cons: {{constitution}}</li>
+            <li>Int: {{intelligence}}</li>
+            <li>Wis: {{wisdom}}</li>
+        </ul>
     </div>
 
+    <div class="col-3" id="toprow3">
       <div>
         <h4>Damage Immunities</h4>
         <p id='d-imminities'>
-             {{damage_immunities}}
+            {{damage_immunities}}
         </p>
       </div>
       <div>
         <h4>Damage Resistances</h4>
         <p id='d-resistances'>
-             {{damage_resistances}}
+            {{damage_resistances}}
         </p>
       </div>
       <div>
         <h4>Damage Vulnerabilities</h4>
         <p id='d-vulnerabilities'>
-             {{damage_vulnerabilities}}
+            {{damage_vulnerabilities}}
         </p>
       </div>
       <div>
@@ -61,15 +66,18 @@
             {{condition_immunities}}
         </p>
       </div>
+    </div>
+      
+    <div class="col-3" id="toprowright"  
       <div>
         <h4>Languages</h4>
         <p id='Languages'>{{languages}}</p>
-      </div>
-      <div>
         <h4>Challenge</h4>
         <p id='challenge'>{{challenge_rating}} ({{xp}} xp)</p>
       </div>
     </div>
+      
+
     <h3> Special Abilities </h3>
     <div id='s-abilities'>
         {{#each special_abilities as |abilities|}}
@@ -89,4 +97,5 @@
     </div>
   </div>
 </div>
+
   <script src='../js/monster.js'></script>
