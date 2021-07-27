@@ -1,0 +1,92 @@
+<div>
+    <form class="form-inline monster-search">
+        <input class="form-control mr-sm-2" id='monster' type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+</div>
+<div id='search-results'>
+    <div>
+      <h1 id='name'>{{name}}</h1>
+      <h2 id='type'>{{type}}, {{alignment}}</h2>
+    </div>
+
+    <div>
+      <div>
+        <h4>Armor Class</h4>
+        <p id='ac'>{{armor_class}}</p>
+      </div>
+      <div>
+        <h4>Hit Points</h4>
+        <p id='hp'>{{hit_points}} ({{hit_dice}})</p>
+      </div>
+      <div>
+        <h4>Speed</h4>
+        <p id='speed'>{{speed.walk}}</p>
+      </div>
+
+    <div> 
+        <h4>Monster stats</h4>
+            <ul id='ms'>
+                <li>Str: {{strength}}</li>
+                <li>Cha: {{charisma}}</li>
+                <li>Dex: {{dexterity}}</li>
+                <li>Cons: {{constitution}}</li>
+                <li>Int: {{intelligence}}</li>
+                <li>Wis: {{wisdom}}</li>
+                
+            </ul>
+    </div>
+
+      <div>
+        <h4>Damage Immunities</h4>
+        <p id='d-imminities'>
+             {{damage_immunities}}
+        </p>
+      </div>
+      <div>
+        <h4>Damage Resistances</h4>
+        <p id='d-resistances'>
+             {{damage_resistances}}
+        </p>
+      </div>
+      <div>
+        <h4>Damage Vulnerabilities</h4>
+        <p id='d-vulnerabilities'>
+             {{damage_vulnerabilities}}
+        </p>
+      </div>
+      <div>
+        <h4>Condition Immunities</h4>
+        <p id='c-imminities'>
+            {{condition_immunities}}
+        </p>
+      </div>
+      <div>
+        <h4>Languages</h4>
+        <p id='Languages'>{{languages}}</p>
+      </div>
+      <div>
+        <h4>Challenge</h4>
+        <p id='challenge'>{{challenge_rating}} ({{xp}} xp)</p>
+      </div>
+    </div>
+    <h3> Special Abilities </h3>
+    <div id='s-abilities'>
+        {{#each special_abilities as |abilities|}}
+        <h4>{{abilities.name}}</h4>
+        <p>{{abilities.desc}}</p>
+        {{/each}}
+    </div>
+
+    <h3>Actions</h3>
+
+    <div id='actions'>
+        {{#each actions as |action|}}
+        <h4>{{action.name}}</h4>
+        <p>{{action.desc}}</p>
+        {{/each}}
+      
+    </div>
+  </div>
+</div>
+  <script src='../js/monster.js'></script>
