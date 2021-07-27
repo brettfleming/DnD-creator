@@ -20,10 +20,10 @@ router.get('/', async (req, res) => {
     });
     console.log( characterData)
     
-    const characters = characterData.map((character) => character.get({ plain: true }));
-    console.log(characters)
+    const character = characterData.map((character) => character.get({ plain: true }));
+    console.log(character)
     res.render('homepage', { 
-      characters, 
+      character, 
       logged_in: req.session.logged_in 
     });
   } catch (err) {
