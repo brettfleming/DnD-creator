@@ -72,6 +72,10 @@ router.get('/create', (req, res) => {
     res.render('create');
     return;
 })
+router.get('/monster', (req, res) => {
+    res.render('monster');
+    return;
+})
 
 router.get('/login', (req, res) => {
   if (req.session.logged_in) {
