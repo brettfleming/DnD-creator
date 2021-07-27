@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Character, User } = require('../models');
+const { Character, User, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 const fetch = require('node-fetch');
 
@@ -11,15 +11,23 @@ router.get('/', async (req, res) => {
           model: User,
           attributes: ['user_name'],
         },
+        // {
+        //   model: Comment,
+        //   attributes: ["comment_text"]
+        // }
       ],
-    });
-    const character = characterData.map((character) => character.get({ plain: true }));
 
+    });
+    console.log( characterData)
+    
+    const characters = characterData.map((character) => character.get({ plain: true }));
+    console.log(characters)
     res.render('homepage', { 
-      character, 
+      characters, 
       logged_in: req.session.logged_in 
     });
   } catch (err) {
+    console.log(err)
     res.status(500).json(err);
   }
 });
@@ -32,6 +40,10 @@ router.get('/character/:id', async (req, res) => {
           model: User,
           attributes: ['user_name'],
         },
+        // {
+        //   model: Comment,
+        //   attributes: ["comment_text"]
+        // }
       ],
     });
 
