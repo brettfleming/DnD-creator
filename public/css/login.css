@@ -1,17 +1,11 @@
-createbutton {
-
-}
-
-#closecharbutton {
-    width: 100px;
-}
-
-#currcharlist {
+#logingrouplabel {
     font-family: 'MedievalSharp', cursive;
     font-size: 5vh;
     color: black;
 }
 
-#userName {
+#signupgrouplabel {
+    font-family: 'MedievalSharp', cursive;
+    font-size: 5vh;
     color: black;
 }
