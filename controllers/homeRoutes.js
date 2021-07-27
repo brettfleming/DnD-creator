@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Character, User } = require('../models');
+const { Character, User, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
@@ -10,8 +10,15 @@ router.get('/', async (req, res) => {
           model: User,
           attributes: ['user_name'],
         },
+        // {
+        //   model: Comment,
+        //   attributes: ["comment_text"]
+        // }
       ],
+
     });
+    console.log( characterData)
+    
     const characters = characterData.map((character) => character.get({ plain: true }));
     console.log(characters)
     res.render('homepage', { 
