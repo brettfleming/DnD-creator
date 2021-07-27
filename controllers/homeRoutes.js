@@ -22,10 +22,11 @@ router.get('/', async (req, res) => {
     const characters = characterData.map((character) => character.get({ plain: true }));
     console.log(characters)
     res.render('homepage', { 
-      character, 
+      characters, 
       logged_in: req.session.logged_in 
     });
   } catch (err) {
+    console.log(err)
     res.status(500).json(err);
   }
 });
