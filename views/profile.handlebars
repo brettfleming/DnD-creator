@@ -3,8 +3,6 @@
 
     <h2 id="userName">Welcome, {{user_name}}!</h2>
 
-    <h2 id="testlink">Welcome, {{user_name}}!</h2>
-
   </div>
 </div>
 
@@ -33,7 +31,7 @@
 
   {{#if characters.length}}
   <div class="col-md-6 character-list">
-    <h3>Current character:</h3>
+    <h3 id="currcharlist">Current character:</h3>
 
 <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
   <div class="card-header">{{user_name}}</div> {{! User's name}}
