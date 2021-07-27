@@ -1,0 +1,17 @@
+#createcharactertitle {
+    font-family: 'MedievalSharp', cursive;
+    font-size: 5vh;
+    color: black;
+}
+
+.form-group {
+    display: block;
+    width: 130px;
+    margin-top: 1vh;
+    color: black;
+}
+
+.create-character {
+    display: flex;
+    flex-direction: column;
+}
