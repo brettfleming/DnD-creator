@@ -1,4 +1,4 @@
-<h1>DND Homepage</h1>
+<h1 id="homepagetitle">DND Homepage</h1>
   <div class="container-fluid" id="charactercardz">
 
     {{#each character}}
@@ -7,7 +7,7 @@
         <div class="card-header">{{user_name}}</div> {{! User's name}}
         <div class="card-body">
           <h5 class="card-title">Name: {{character_name}}</h5> {{! Created character's name}}
-          <p class="card-text">Background: {{character_background}}: </p>
+          <p class="card-text">Background: {{character_background}} </p>
           <p class="card-text">Race: {{character_race}} </p>
           <p class="card-text">Alignment: {{character_alignment}} </p>
           <p class="card-text">Class: {{character_class}} </p>
