@@ -28,14 +28,19 @@ router.get("/:id", async (req, res) => {
 });
 
 router.post('/', withAuth, async (req, res) => {
+    console.log("comment data", req.body);
     try {
         const newComment = await Comment.create({
             ...req.body,
-            comment_id: req.session.comment_id,
+            user_id: req.session.user_id,
+            // comment_id: req.session.comment_id,
         });
+        console.log(newComment);
         res.status(200).json(newComment);
         
-    } catch (err) {
+    } catch (err) { console.log(err)
         res.status(400).json(err);
     }
 });
+
+module.exports = router;

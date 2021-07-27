@@ -16,3 +16,19 @@
     <a href="/profile"><button class="btn btn-sm btn-primary text-white" id="closecharbutton">Close</button></a>
   </div>
 </div>
+<div>
+  <form id="comment-form">
+    <label for="comment">Comment:</label>
+    <input class="form-input" type="text" id="comment" />
+    <div class="form-group">
+        <button id='commentbtn' class="btn btn-primary" type="submit" data-characterId="{{id}}">comment</button>
+    </div>
+  </form>
+   <div>
+      {{#each comments}}
+        <p>{{comment_text}}</p>
+      {{/each}}
+    </div>
+</div>
+
+<script src="../js/comment.js"></script>
