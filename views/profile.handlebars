@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-auto">
-    <h2>Welcome, {{user_name}}!</h2>
+    <h2 id="testlink">Welcome, {{user_name}}!</h2>
   </div>
 </div>
 
@@ -42,10 +42,13 @@
     </div>
     {{/each}}
   </div>
+
+  <div>
+  <a href="/create"><button class="btn btn-sm btn-success" id="createbutton">Create</button></a>
+  </div>
+
 </div>
-<div>
-  <button><a href="/create">Create</a></button>
-</div>
+
   {{/if}}
 </div>
 <script src="./js/profile.js"></script>
