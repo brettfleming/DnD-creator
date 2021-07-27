@@ -3,3 +3,23 @@
     font-size: 10vh;
     color: black;
 }
+
+#charachtercontainer { 
+    display: inline-flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.cardz {
+    display: inline-flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-right: 1vh;
+}
+
+.commenttext {
+    margin-right: 1vh;
+    margin-left: 1vh;
+}
