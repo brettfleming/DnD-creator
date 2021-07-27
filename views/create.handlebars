@@ -1,6 +1,6 @@
 <h2>Create Character</h2>
 
-<form>
+<form class='create-character'>
         <div class="form-group">
             <label for="character_name">Character Name:</label>
             <input class="form-input" type="text" id="character_name" />
@@ -12,49 +12,45 @@
         <div class="form-group">
             <label for="character_race">Race</label>
             <select name="character_race" id="character_race">
-                <option value="race1">race1</option>
-                <option value="race2">race2</option>
-                <option value="race3">race3</option>
             </select>
         </div>
         <div class="form-group">
             <label for="character_class">class</label>
             <select name="character_class" id="character_class">
-                <option value="class1">class1</option>
-                <option value="class2">class2</option>
-                <option value="class3">class3</option>
             </select>
         </div>
         <div class="form-group">
             <label for="character_Alignment">Alignment</label>
-            <select name="character_Alignment" id="character_Alignment">
-                <option value="Alignment1">Alignment1</option>
-                <option value="Alignment2">Alignment2</option>
-                <option value="Alignment3">Alignment3</option>
+            <select name="character_Alignment" id="character_alignment">
             </select>
         </div>
          <div class="form-group">
-            <label for="character_str">Str:</label>
-            <input class="form-input" type="text" id="character_name" />
+            <label for="str">Str:</label>
+            <input class="form-input" type="text" id="str" />
         </div>
          <div class="form-group">
-            <label for="character_dex">Dex:</label>
-            <input class="form-input" type="text" id="character_name" />
+            <label for="dex">Dex:</label>
+            <input class="form-input" type="text" id="dex" />
         </div>
          <div class="form-group">
-            <label for="character_chr">Chr:</label>
-            <input class="form-input" type="text" id="character_name" />
+            <label for="chr">Chr:</label>
+            <input class="form-input" type="text" id="chr" />
         </div>
          <div class="form-group">
-            <label for="character_const">Const:</label>
-            <input class="form-input" type="text" id="character_name" />
+            <label for="const">Const:</label>
+            <input class="form-input" type="text" id="const" />
         </div>
          <div class="form-group">
-            <label for="character_int">Int:</label>
-            <input class="form-input" type="text" id="character_name" />
+            <label for="int">Int:</label>
+            <input class="form-input" type="text" id="int" />
         </div>
          <div class="form-group">
-            <label for="character_wis">Wis:</label>
-            <input class="form-input" type="text" id="character_name" />
+            <label for="wis">Wis:</label>
+            <input class="form-input" type="text" id="wis" />
         </div>
+        <div class="form-group">
+            <button class="btn btn-primary" type="submit">submit</button>
+      </div>
 </form>
+<script src="js/api.js"></script>
+<script src="js/create.js"></script>
