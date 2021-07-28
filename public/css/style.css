@@ -20,16 +20,6 @@ header h1{
     display: inline-flex;
 }
 
-#ms li {
-    font-size: x-large
-}
-
-#searchresultname {
-    font-family: 'MedievalSharp', cursive;
-    color: black;
-    font-size: 5em;
-}
-
 .inputlabels {
     font-size: xx-large;
     padding-bottom: 1vh;
