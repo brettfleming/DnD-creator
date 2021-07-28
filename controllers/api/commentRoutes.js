@@ -34,6 +34,10 @@ router.post('/', withAuth, async (req, res) => {
             ...req.body,
             user_id: req.session.user_id,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+            // comment_id: req.session.comment_id,
+>>>>>>> origin
 =======
             // comment_id: req.session.comment_id,
 >>>>>>> origin
