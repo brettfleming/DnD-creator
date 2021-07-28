@@ -1,5 +1,5 @@
 createbutton {
-
+    
 }
 
 #closecharbutton {
@@ -8,7 +8,11 @@ createbutton {
 
 #currcharlist {
     font-family: 'MedievalSharp', cursive;
+<<<<<<< HEAD
     font-size: 5vh;
+=======
+    font-size: 8vh;
+>>>>>>> main
     color: black;
 }
 

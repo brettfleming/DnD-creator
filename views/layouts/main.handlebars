@@ -17,6 +17,10 @@
   <link rel="stylesheet" href="/css/homepage.css">
   <link rel="stylesheet" href="/css/create.css">
   <link rel="stylesheet" href="/css/login.css">
+<<<<<<< HEAD
+=======
+  <link rel="stylesheet" href="/css/search.css">
+>>>>>>> main
 
   <title>Dnd!</title>
 
@@ -25,15 +29,17 @@
 <body>
   <div class="flex-column justify-space-around">
     <header class="display-flex justify-space-between align-center p-2">
+      
       <h1>
         <a href="/">Back to Adventure!</a>
       </h1>
+      
       <nav>
         <a href="/monster">Monster Index</a> |
         {{#if logged_in}}
         <a href="/profile">profile</a> |
         <a href="/create">Create character</a> |
-        <a href="" id="logout">logout</a>
+        <a href="/" id="logout">logout</a>
         {{else}}
         <a href="/login">login</a>
         {{/if}}

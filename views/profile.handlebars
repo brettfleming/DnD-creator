@@ -30,6 +30,7 @@
   </div> --}}
 
   {{#if characters.length}}
+<<<<<<< HEAD
   <div class="col-md-6 character-list">
     <h3 id="currcharlist">Current character:</h3>
 
@@ -47,10 +48,25 @@
     <p class="card-text">Constitution: {{cons}} </p>
     <p class="card-text">Intelligence: {{int}} </p>
     <p class="card-text">Wisdom: {{wis}} </p>
+=======
+  <div class="col-md-10 character-list">
+    <h3 id="currcharlist">Current character:</h3>
+
+    {{#each characters as |character|}}
+    <div class="row mb-2">
+      <div class="col-md-6">
+        <h4><a href="/character/{{character.id}}">{{character.character_name}}</a></h4>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-sm btn-danger" data-id="{{character.id}}">DELETE</button>
+      </div>
+    </div>
+    {{/each}}
+>>>>>>> main
   </div>
 
   <div>
-  <a href="/create"><button class="btn btn-sm btn-success" id="createbutton">Create</button></a>
+  <a href="/create"><button class="btn btnlg btn-success" id="createbutton">Create</button></a>
   </div>
 
 </div>

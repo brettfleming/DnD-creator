@@ -1,3 +1,7 @@
+*{
+    color: black;
+}
+
 body {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
@@ -7,5 +11,30 @@ body {
     background-size: cover;
 }
 
+header h1{
+    font-family: 'MedievalSharp', cursive;
+    color: black;
+}
 
+#topcolumncontainer {
+    display: inline-flex;
+}
 
+.inputlabels {
+    font-size: xx-large;
+    padding-bottom: 1vh;
+}
+
+#homepagecards {
+    font-family: 'MedievalSharp', cursive;
+    color: rgba(153, 22, 22, 0.856);
+    font-size: 2em;
+}
+
+#bannertext {
+
+}
+
+.createformlabel {
+    font-size: xx-large;
+}

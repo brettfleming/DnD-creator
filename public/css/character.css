@@ -7,4 +7,11 @@
 
 .indivcard {
     margin-right: 1vh;
+<<<<<<< HEAD
+=======
+    display: inline-flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start
+>>>>>>> main
 }

@@ -1,0 +1,58 @@
+#monstertitleuser {
+    margin-top: 2vh;
+}
+
+/* #toprowright {
+    margin-left: 1vh;
+} */
+
+#toprow2 {
+    margin-right: 1vh;
+}
+
+#searchmonstersbtn {
+    margin-top: 2vh;
+}
+
+#searchgroup{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;    
+}
+
+#monster {
+    width: 750px;
+    margin-right: 2vh;
+}
+
+#searchmonstersbtn {
+    position: relative;
+    width: 100px;
+}
+
+#type {
+    font-size: 3em;
+}
+
+#searchresultname {
+    font-family: 'MedievalSharp', cursive;
+    color: black;
+    font-size: 6em;
+}
+
+.statlabel {
+    font-size: 2em;
+}
+
+#ac, #hp, #speed, #d-imminities, #d-resistances, #d-vulnerabilities, #c-imminities, #Languages, #challenge, #s-abilities, #actions {
+    font-size: 2vh;
+}
+
+.labelz {
+    font-size: 2em;
+}
+
+.searchheaderlabelz {
+    font-size: 3em;
+    font-family: 'MedievalSharp', cursive;
+}

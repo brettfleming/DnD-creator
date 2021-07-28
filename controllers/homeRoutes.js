@@ -11,17 +11,21 @@ router.get('/', async (req, res) => {
           model: User,
           attributes: ['user_name'],
         },
-        // {
-        //   model: Comment,
-        //   attributes: ["comment_text"]
-        // }
+        {
+          model: Comment,
+          attributes: ["comment_text"]
+        }
       ],
 
     });
-    console.log( characterData)
+    // console.log( characterData)
     
     const character = characterData.map((character) => character.get({ plain: true }));
+<<<<<<< HEAD
     console.log(character)
+=======
+    console.log(character[0].comments)
+>>>>>>> main
     res.render('homepage', { 
       character, 
       logged_in: req.session.logged_in 
@@ -40,15 +44,15 @@ router.get('/character/:id', async (req, res) => {
           model: User,
           attributes: ['user_name'],
         },
-        // {
-        //   model: Comment,
-        //   attributes: ["comment_text"]
-        // }
+        {
+          model: Comment,
+          attributes: ["comment_text"]
+        }
       ],
     });
 
     const character = characterData.get({ plain: true });
-
+    console.log(character);
     res.render('character', {
       ...character,
       logged_in: req.session.logged_in
