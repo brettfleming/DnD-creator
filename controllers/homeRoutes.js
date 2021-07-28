@@ -22,22 +22,22 @@ router.get('/', async (req, res) => {
 
     });
     // console.log( characterData)
-    if(!characterData) {
-      await seed();
-      characterData = await Character.findAll({
-        include: [
-          {
-            model: User,
-            attributes: ['user_name'],
-          },
-          {
-            model: Comment,
-            attributes: ["comment_text"]
-          }
-        ],
+    // if(!characterData) {
+    //   await seed();
+    //   characterData = await Character.findAll({
+    //     include: [
+    //       {
+    //         model: User,
+    //         attributes: ['user_name'],
+    //       },
+    //       {
+    //         model: Comment,
+    //         attributes: ["comment_text"]
+    //       }
+    //     ],
   
-      });
-    }
+    //   });
+    // }
     const character = characterData.map((character) => character.get({ plain: true }));
     if(character[0]) {
       console.log(character[0].comments);
