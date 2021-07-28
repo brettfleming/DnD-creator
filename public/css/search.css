@@ -2,8 +2,12 @@
     margin-top: 2vh;
 }
 
-#toprowright {
-    margin-left: 3vh;
+/* #toprowright {
+    margin-left: 1vh;
+} */
+
+#toprow2 {
+    margin-right: 1vh;
 }
 
 #searchmonstersbtn {
