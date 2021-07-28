@@ -71,4 +71,4 @@ Character.init(
         }
 );
 
-module.exports =   Character
+module.exports = Character

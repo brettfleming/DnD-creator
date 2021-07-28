@@ -21,11 +21,7 @@ router.get('/', async (req, res) => {
     // console.log( characterData)
     
     const character = characterData.map((character) => character.get({ plain: true }));
-<<<<<<< HEAD
-    console.log(character)
-=======
     console.log(character[0].comments)
->>>>>>> main
     res.render('homepage', { 
       character, 
       logged_in: req.session.logged_in 

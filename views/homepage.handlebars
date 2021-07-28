@@ -1,14 +1,4 @@
 <h1 id="homepagetitle">DND Homepage</h1>
-<<<<<<< HEAD
-  <div class="container-fluid" id="charactercardz">
-
-    {{#each character}}
-    <div class="indivcard">
-      <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
-        <div class="card-header">{{user_name}}</div> {{! User's name}}
-        <div class="card-body">
-          <h5 class="card-title">Name: {{character_name}}</h5> {{! Created character's name}}
-=======
 
 <div id="charachtercontainer">
   
@@ -19,7 +9,6 @@
         <div class="card-header">{{user_name}}</div> {{! User's name}}
         <div class="card-body">
           <h5 class="card-title" >Name: <span id="homepagecards">{{character_name}}</span></h5> {{! Created character's name}}
->>>>>>> main
           <p class="card-text">Background: {{character_background}} </p>
           <p class="card-text">Race: {{character_race}} </p>
           <p class="card-text">Alignment: {{character_alignment}} </p>
@@ -31,31 +20,6 @@
           <p class="card-text">Intelligence: {{int}} </p>
           <p class="card-text">Wisdom: {{wis}} </p>
         </div>
-<<<<<<< HEAD
-      </div>
-    </div>
-    {{/each}}
-    {{!-- {{#each characters as |character| }}
-    <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
-        <div class="card-header">{{user_name}}</div> {{! User's name}}
-        <div class="card-body">
-            <h5 class="card-title">Name: {{character.0.character_name}}</h5> {{! Created character's name}}
-            <p class="card-text">Background: {{character_background}}: </p>
-            <p class="card-text">Race: {{character_race}} </p>
-            <p class="card-text">Alignment: {{character_alignment}} </p>
-            <p class="card-text">Class: {{character_class}} </p>
-            <p class="card-text">Strength: {{str}} </p>
-            <p class="card-text">Dexterity: {{dex}} </p>
-            <p class="card-text">Charisma: {{chr}} </p>
-            <p class="card-text">Consitution: {{cons}} </p>
-            <p class="card-text">Intelligence: {{int}} </p>
-            <p class="card-text">Wisdom: {{wis}} </p>
-        </div>
-    </div>
-
-  </div>
-    {{/each}} --}}
-=======
         
         <div>
           {{#each comments}}
@@ -68,4 +32,3 @@
     {{/each}}
 </div>
 
->>>>>>> main

@@ -3,14 +3,6 @@ const { Router } = require("express");
 const { Character, Comment, User } = require("../models");
 const withAuth = require("../utils/auth");
 
-//get user information
-
-//get profile information
-
-
-
-//edit charecter information
-
 router.put("/edit/:id", withAuth, async (req, res) =>{
     try {
         const charecterData = await Character.findOne(
