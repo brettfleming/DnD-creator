@@ -1,5 +1,5 @@
 #monstertitleuser {
-
+    margin-top: 2vh;
 }
 
 #columntopleft {
@@ -18,3 +18,22 @@
     margin-top: 2vh;
 }
 
+#searchgroup{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;    
+}
+
+#monster {
+    width: 750px;
+    margin-right: 2vh;
+}
+
+#searchmonstersbtn {
+    position: relative;
+    width: 100px;
+}
+
+#type {
+    font-size: 3em;
+}
