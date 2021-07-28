@@ -2,16 +2,8 @@
     margin-top: 2vh;
 }
 
-#columntopleft {
-
-}
-
-#columntopmiddle {
-
-}
-
-#topcolumnright {
-
+#toprowright {
+    margin-left: 3vh;
 }
 
 #searchmonstersbtn {
@@ -36,4 +28,27 @@
 
 #type {
     font-size: 3em;
+}
+
+#searchresultname {
+    font-family: 'MedievalSharp', cursive;
+    color: black;
+    font-size: 6em;
+}
+
+.statlabel {
+    font-size: 2em;
+}
+
+#ac, #hp, #speed, #d-imminities, #d-resistances, #d-vulnerabilities, #c-imminities, #Languages, #challenge, #s-abilities, #actions {
+    font-size: 2vh;
+}
+
+.labelz {
+    font-size: 2em;
+}
+
+.searchheaderlabelz {
+    font-size: 3em;
+    font-family: 'MedievalSharp', cursive;
 }
