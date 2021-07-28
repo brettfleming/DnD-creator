@@ -17,5 +17,5 @@ const seedAll = async () => {
 
     process.exit(0);
 };
-exports.module = seedAll;
+module.exports = seedAll;
 // seedAll();

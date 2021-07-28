@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { Character, User, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 const fetch = require('node-fetch');
-const seed = require('./seeds/index');
+const seed = require('../seeds/index');
 
 
 router.get('/', async (req, res) => {
