@@ -2,55 +2,66 @@
 <p>what would you like the change about your Character</p>
 
 <form class='update-character'>
-    <div class="form-group">
-        <label for="character_name" width="700px" class="createformlabel">Character Name:</label>
-        <input class="form-input" type="text" id="character_name" value="{{character_name}}" />
-    </div>
-    <div class="form-group">
-        <label for="character_background" width="200px" class="createformlabel">Character Background:</label>
-        <input class="form-input" type="text" id="character_background" value="{{character_background}}" />
-    </div>
-    <div class="form-group">
-        <label for="character_race" width="200px" class="createformlabel">Race:</label>
-        <select name="character_race" id="character_race">
-        </select>
-    </div>
-    <div class="form-group">
-        <label for="character_class" width="200px" class="createformlabel">Class:</label>
-        <select name="character_class" id="character_class">
-        </select>
-    </div>
-    <div class="form-group">
-        <label for="character_Alignment" width="200px" class="createformlabel">Alignment:</label>
-        <select name="character_Alignment" id="character_alignment">
-        </select>
-    </div>
+    <div id="updatecharacter1">
         <div class="form-group">
-        <label for="str" width="200px" class="createformlabel">Strength:</label>
-        <input class="form-input" type="text" id="str" value="{{str}}" />
-    </div>
+            <label for="character_name" width="700px" class="createformlabel">Character Name:</label>
+            <input class="form-input" type="text" id="character_name" value="{{character_name}}" />
+        </div>
         <div class="form-group">
-        <label for="dex" width="200px" class="createformlabel">Dexterity:</label>
-        <input class="form-input" type="text" id="dex" value="{{dex}}" />
-    </div>
+            <label for="character_background" width="200px" class="createformlabel">Character Background:</label>
+            <input class="form-input" type="text" id="character_background" value="{{character_background}}" />
+        </div>
         <div class="form-group">
-        <label for="chr" width="200px" class="createformlabel">Charisma:</label>
-        <input class="form-input" type="text" id="chr" value="{{chr}}" />
-    </div>
+            <label for="character_race" width="200px" class="createformlabel">Race:</label>
+            <select name="character_race" id="character_race">
+            </select>
+        </div>
         <div class="form-group">
-        <label for="const" width="200px" class="createformlabel">Constitution:</label>
-        <input class="form-input" type="text" id="const" value="{{cons}}" />
-    </div>
+            <label for="character_class" width="200px" class="createformlabel">Class:</label>
+            <select name="character_class" id="character_class">
+            </select>
+        </div>
         <div class="form-group">
-        <label for="int" width="200px" class="createformlabel">Intelligence:</label>
-        <input class="form-input" type="text" id="int" value="{{int}}"/>
+            <label for="character_Alignment" width="200px" class="createformlabel">Alignment:</label>
+            <select name="character_Alignment" id="character_alignment">
+            </select>
+        </div>
     </div>
+
+    <div id="updatecharacter2">
         <div class="form-group">
-        <label for="wis" width="200px" class="createformlabel">Wisdom:</label>
-        <input class="form-input" type="text" id="wis" value="{{wis}}" />
-    </div>
-    <div class="form-group">
-        <button id="submitnewcharacter" class="btn btn-primary" type="submit" data-characterId="{{id}}">submit</button>
+            <label for="str" width="200px" class="createformlabel">Strength:</label>
+            <input class="form-input" type="text" id="str" value="{{str}}" />
+        </div>
+        
+        <div class="form-group">
+            <label for="dex" width="200px" class="createformlabel">Dexterity:</label>
+            <input class="form-input" type="text" id="dex" value="{{dex}}" />
+        </div>
+        
+        <div class="form-group">
+            <label for="chr" width="200px" class="createformlabel">Charisma:</label>
+            <input class="form-input" type="text" id="chr" value="{{chr}}" />
+        </div>
+        
+        <div class="form-group">
+            <label for="const" width="200px" class="createformlabel">Constitution:</label>
+            <input class="form-input" type="text" id="const" value="{{cons}}" />
+        </div>
+        
+        <div class="form-group">
+            <label for="int" width="200px" class="createformlabel">Intelligence:</label>
+            <input class="form-input" type="text" id="int" value="{{int}}"/>
+        </div>
+        
+        <div class="form-group">
+            <label for="wis" width="200px" class="createformlabel">Wisdom:</label>
+            <input class="form-input" type="text" id="wis" value="{{wis}}" />
+        </div>
+        
+        <div class="form-group">
+            <button id="submitnewcharacter" class="btn btn-primary" type="submit" data-characterId="{{id}}">submit</button>
+        </div>
     </div>
 </form>
 <script src="../js/api.js"></script>
