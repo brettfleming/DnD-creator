@@ -1,56 +1,72 @@
 <h2 id="createcharactertitle">Create Character</h2>
 
 <form class='create-character'>
-    <div class="form-group">
-        <label for="character_name" width="700px" class="createformlabel">Character Name:</label>
-        <input class="form-input" type="text" id="character_name" />
-    </div>
-    <div class="form-group">
-        <label for="character_background" width="200px" class="createformlabel">Character Background:</label>
-        <input class="form-input" type="text" id="character_background" />
-    </div>
-    <div class="form-group">
-        <label for="character_race" width="200px" class="createformlabel">Race:</label>
-        <select name="character_race" id="character_race">
-        </select>
-    </div>
-    <div class="form-group">
-        <label for="character_class" width="200px" class="createformlabel">Class:</label>
-        <select name="character_class" id="character_class">
-        </select>
-    </div>
-    <div class="form-group">
-        <label for="character_Alignment" width="200px" class="createformlabel">Alignment:</label>
-        <select name="character_Alignment" id="character_alignment">
-        </select>
-    </div>
+    <div id="columncontainercreate1">
         <div class="form-group">
-        <label for="str" width="200px" class="createformlabel">Strength:</label>
-        <input class="form-input" type="text" id="str" />
-    </div>
+            <label for="character_name" width="700px" class="createformlabel">Character Name:</label>
+            <input class="form-input" type="text" id="character_name" />
+        </div>
         <div class="form-group">
-        <label for="dex" width="200px" class="createformlabel">Dexterity:</label>
-        <input class="form-input" type="text" id="dex" />
-    </div>
+            <label for="character_background" width="200px" class="createformlabel">Character Background:</label>
+            <input class="form-input" type="text" id="character_background" />
+        </div>
         <div class="form-group">
-        <label for="chr" width="200px" class="createformlabel">Charisma:</label>
-        <input class="form-input" type="text" id="chr" />
-    </div>
+            <label for="character_race" width="200px" class="createformlabel">Race:</label>
+            <select name="character_race" id="character_race">
+            </select>
+        </div>
         <div class="form-group">
-        <label for="const" width="200px" class="createformlabel">Constitution:</label>
-        <input class="form-input" type="text" id="const" />
-    </div>
+            <label for="character_class" width="200px" class="createformlabel">Class:</label>
+            <select name="character_class" id="character_class">
+            </select>
+        </div>
         <div class="form-group">
-        <label for="int" width="200px" class="createformlabel">Intelligence:</label>
-        <input class="form-input" type="text" id="int" />
+            <label for="character_Alignment" width="200px" class="createformlabel">Alignment:</label>
+            <select name="character_Alignment" id="character_alignment">
+            </select>
+        </div>
     </div>
+
+    <div id="columncontainercreate1">
         <div class="form-group">
-        <label for="wis" width="200px" class="createformlabel">Wisdom:</label>
-        <input class="form-input" type="text" id="wis" />
+            <label for="str" width="200px" class="createformlabel">Strength:</label>
+            <input class="form-input" type="text" id="str" />
+        </div>
+
+        <div class="form-group">
+            <label for="dex" width="200px" class="createformlabel">Dexterity:</label>
+            <input class="form-input" type="text" id="dex" />
+        </div>
+
+        <div class="form-group">
+            <label for="chr" width="200px" class="createformlabel">Charisma:</label>
+            <input class="form-input" type="text" id="chr" />
+        </div>
+
+        <div class="form-group">
+            <label for="const" width="200px" class="createformlabel">Constitution:</label>
+            <input class="form-input" type="text" id="const" />
+        </div>
+
+        <div class="form-group">
+            <label for="int" width="200px" class="createformlabel">Intelligence:</label>
+            <input class="form-input" type="text" id="int" />
+        </div>
+
+        <div class="form-group">
+            <label for="wis" width="200px" class="createformlabel">Wisdom:</label>
+            <input class="form-input" type="text" id="wis" />
+        </div>
     </div>
+
     <div class="form-group">
-        <button class="btn btn-primary" type="submit">submit</button>
+        <button class="btn btn-primary" type="submit" id="submitnewcharacter">submit</button>
     </div>
+
 </form>
+
+        <button class="btn btn-warning" type="button" id="throwdice">Generate Random Stats</button>
+
+
 <script src="js/api.js"></script>
 <script src="js/create.js"></script>

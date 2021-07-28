@@ -12,7 +12,7 @@ const createComment = async (event) => {
         });
     
         if (response.ok) {
-        //   document.location.replace('/chracter/:id');
+          document.location.replace(`/character/${character_id}`);
         } else {
           alert(response.statusText);
         }

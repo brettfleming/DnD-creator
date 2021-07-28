@@ -82,11 +82,15 @@ router.get('/profile', withAuth, async (req, res) => {
   }
 });
 router.get('/create', (req, res) => {
-    res.render('create');
+    res.render('create', {
+      logged_in: req.session.logged_in
+    });
     return;
 })
 router.get('/monster', (req, res) => {
-    res.render('monsterSearch');
+    res.render('monsterSearch', {
+      logged_in: req.session.logged_in
+    });
     return;
 })
 router.get('/monster/:monsterName', async (req, res) => {
@@ -115,9 +119,33 @@ router.get('/monster/:monsterName', async (req, res) => {
     }, "")
     monsterData.damage_vulnerabilities = monsterData.damage_vulnerabilities.slice(0, monsterData.damage_vulnerabilities.length - 2);
 
-    res.render('monster', monsterData);
+    res.render('monster', { 
+      ...monsterData, 
+      logged_in: req.session.logged_in
+    });
     return;
-})
+});
+router.get('/update/:id', async (req, res) => {
+  try {
+    const characterData = await Character.findByPk(req.params.id, {
+      include: [
+        {
+          model: User,
+          attributes: ['user_name'],
+        }
+      ],
+    });
+
+    const character = characterData.get({ plain: true });
+    console.log(character);
+    res.render('update', {
+      ...character,
+      logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 router.get('/login', (req, res) => {
   if (req.session.logged_in) {
