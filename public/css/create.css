@@ -13,5 +13,30 @@
 
 .create-character {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+}
+
+#createformlabel {
+    width: 1000px;
+}
+
+#columncontainercreate1 {
+    margin-right: 10vh;
+}
+
+.form-group {
+    margin-bottom: 2vh;
+}
+
+.form-input {
+    margin-top: 1vh;
+}
+
+#submitnewcharacter {
+    height: 5vh;
+    width: 10vw;
+}
+
+#throwdice {
+    margin-top: -8vh;
 }

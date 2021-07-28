@@ -1,5 +1,5 @@
 
-const submitBtn = document.getElementById('submitBtn');
+const submitBtn = document.getElementById('submitnewcharacter');
 const selectTag = document.getElementById('character_race');
 const selectTag2 = document.getElementById('character_class');
 const selectTag3 = document.getElementById('character_alignment');
