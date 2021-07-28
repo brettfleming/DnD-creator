@@ -21,7 +21,12 @@ router.get('/', async (req, res) => {
     // console.log( characterData)
     
     const character = characterData.map((character) => character.get({ plain: true }));
-    console.log(character[0].comments)
+    if(character[0]) {
+      console.log(character[0].comments);
+    } else {
+      console.log('comment does not exist');
+    }
+  
     res.render('homepage', { 
       character, 
       logged_in: req.session.logged_in 
