@@ -41,12 +41,12 @@ function throwdembonez () {
     const intthrow = document.getElementById('int');
     const wisthrow = document.getElementById('wis');
 
-    let strRand = Math.floor(Math.random() * 20);
-    let dexRand = Math.floor(Math.random() * 20);
-    let chrRand = Math.floor(Math.random() * 20);
-    let conRand = Math.floor(Math.random() * 20);
-    let intRand = Math.floor(Math.random() * 20);
-    let wisRand = Math.floor(Math.random() * 20);
+    let strRand = Math.floor(Math.random() * 21);
+    let dexRand = Math.floor(Math.random() * 21);
+    let chrRand = Math.floor(Math.random() * 21);
+    let conRand = Math.floor(Math.random() * 21);
+    let intRand = Math.floor(Math.random() * 21);
+    let wisRand = Math.floor(Math.random() * 21);
 
     strthrow.setAttribute('value',strRand);
     dexthrow.setAttribute('value',dexRand);
