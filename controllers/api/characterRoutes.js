@@ -1,27 +1,31 @@
 const router = require('express').Router();
-const { Character, User } = require('../../models');
+const { Character, User, Comment} = require('../../models');
 const withAuth = require('../../utils/auth');
 
 
-// router.get('/', async (req, res) => {
-//   try {
-//     const characterData = await Character.findAll({
-//       include: [
-//         {
-//           model: User,
-//           attributes: ['user_name'],
-//         },
-//       ],
-//     });
-//     const characters = characterData.map((character) => character.get({ plain: true }));
+router.get('/:id', async (req, res) => {
+  try {
+    const characterData = await Character.findByPk(req.params.id, {
+      include: [
+        {
+          model: User,
+          attributes: ['user_name'],
+        },
+        {
+          model: Comment,
+          attributes: ["comment_text"]
+        }
+      ],
+    });
 
-//     res.json({ characters: characters});
-
-//   } catch (err) {
-//     console.log(err)
-//     res.status(500).json(err);
-//   }
-// });
+    const character = characterData.get({ plain: true });
+    console.log(character);
+    res.json(character)
+  } catch (err) {
+    console.log(err)
+    res.status(500).json(err);
+  }
+});
 
 router.post('/create', withAuth, async (req, res) => {
   console.log(req.body)
@@ -36,6 +40,22 @@ router.post('/create', withAuth, async (req, res) => {
         res.status(400).json(err);
     }
 });
+router.put('/update/:id', withAuth, async (req, res) => {
+  console.log(req.params.id);
+  try {
+    const newCharacterdata = await Character.update(req.body, {
+      where: {
+        id: req.params.id,
+      },
+    });
+    console.log(newCharacterdata)
+    res.status(200).json(newCharacterdata);
+  } catch (err) {
+    console.log(err)
+    res.status(400).json(err);
+  }
+
+})
 
 router.delete('/:id', withAuth, async (req, res) => {
     try {
