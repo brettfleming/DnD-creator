@@ -1,0 +1,12 @@
+.update-character {
+    display: flex;
+    flex-direction: row;
+}
+
+#updatecharacter1 {
+    margin-right: 10vh;
+}
+
+#updatecharacter2 {
+
+}
