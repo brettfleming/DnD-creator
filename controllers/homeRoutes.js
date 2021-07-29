@@ -57,7 +57,9 @@ router.get('/character/:id', async (req, res) => {
     res.render('character', {
       ...character,
       logged_in: req.session.logged_in,
-      logged_in_id: req.session.user_id
+      logged_in_id: req.session.user_id,
+      matched: req.session.user_id == character.user_id
+
       
     });
   } catch (err) {
