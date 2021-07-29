@@ -18,3 +18,7 @@
 #viewcommentcontainer {
     display: flex;
 }
+
+.commenttext {
+    color: cornsilk;
+}

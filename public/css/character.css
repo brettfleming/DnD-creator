@@ -15,8 +15,13 @@
 
 #homelink {
     font-size: 4em;
+    margin-top: -3vh;
 }
 
 .navlinx {
     font-size: 1.5em;
+}
+
+#commenttext2 {
+    color: cornsilk;
 }
