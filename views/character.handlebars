@@ -14,7 +14,11 @@
     <p class="card-text">Intelligence: {{int}} </p>
     <p class="card-text">Wisdom: {{wis}} </p>
     <a href="/profile"><button class="btn btn-sm btn-primary text-white" id="closecharbutton">Close</button></a>
+    {{#if logged_in}}
+    {{#ifEquals logged_in_id user_id}}
     <a href="/update/{{id}}"><button class="btn btn-sm btn-success text-white" id="closecharbutton">Update</button></a>
+    {{/ifEquals}}
+    {{/if}}
   </div>
 </div>
 <div>
@@ -31,5 +35,6 @@
       {{/each}}
     </div>
 </div>
-
+{{log user_id}}
+{{log logged_in_id}}
 <script src="../js/comment.js"></script>
