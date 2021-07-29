@@ -56,3 +56,23 @@
     font-size: 3em;
     font-family: 'MedievalSharp', cursive;
 }
+
+/* @media screen and (max-width: 1100px) {
+    #toprowright {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    #toprow2 {
+        width: 400px;
+    }
+} */
+
+#toprowright {
+    margin-left: 1vh;
+}
+
+#toprow2 {
+    margin-right: 1vh;
+}
