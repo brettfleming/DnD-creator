@@ -16,20 +16,6 @@ const characterData = [
         user_id: 8
     },
     {
-        character_name: "Butthead",
-        character_background: "Doesn't smell great",
-        character_race: "tiefling",
-        character_alignment: "Neutral", 
-        character_class: "Paladin",
-        str: 9,
-        dex: 9,
-        chr: 11,
-        cons: 13, 
-        int: 14,
-        wis: 14,
-        user_id: 4
-    },
-    {
         character_name: "Chairface",
         character_background: "Has poor personal hygeine",
         character_race: "Fighter",
@@ -112,6 +98,20 @@ const characterData = [
         int: 14,
         wis: 15,
         user_id: 7
+    },
+    {
+        character_name: "Barbados Slim",
+        character_background: "Doesn't smell great",
+        character_race: "tiefling",
+        character_alignment: "Neutral", 
+        character_class: "Paladin",
+        str: 9,
+        dex: 9,
+        chr: 11,
+        cons: 13, 
+        int: 14,
+        wis: 14,
+        user_id: 4
     },
     {
         character_name: "Amy",

@@ -10,6 +10,8 @@ const logout = async () => {
       alert(response.statusText);
     }
   };
+
+  console.log("OHIO STATE MUST BE DESTROYED.");
   
   document.querySelector('#logout').addEventListener('click', logout);
   

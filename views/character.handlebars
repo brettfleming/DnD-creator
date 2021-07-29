@@ -27,14 +27,25 @@
     <input class="form-input" type="text" id="comment" />
     <div class="form-group">
         <button id='commentbtn' class="btn btn-primary" type="submit" data-characterId="{{id}}">comment</button>
-    </div>
-  </form>
-   <div>
+
+
+  <div id="commentgroupcontainer">
+    <form id="comment-form">
+      <label for="comment" id="commentlabel">Comment:</label>
+      {{!-- brett has this working. Testing out the textarea control underneath. --}}
+      {{!-- <input class="form-input" type="text" id="comment" /> --}}
+      <textarea id="comment" rows='10' cols='32'></textarea>
+      <div class="form-group">
+          <button id='commentbtn' class="btn btn-warning btn-lg" type="submit" data-characterId="{{id}}">Comment</button>
+      </div>
+    </form>
+
+    <div>
       {{#each comments}}
         <p>{{comment_text}}</p>
       {{/each}}
     </div>
+  </div>
 </div>
-{{log user_id}}
-{{log logged_in_id}}
+
 <script src="../js/comment.js"></script>

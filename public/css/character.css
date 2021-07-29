@@ -12,3 +12,11 @@
     flex-direction: row;
     justify-content: flex-start
 }
+
+#homelink {
+    font-size: 4em;
+}
+
+.navlinx {
+    font-size: 1.5em;
+}

@@ -1,6 +1,6 @@
 const createComment = async (event) => {
     event.preventDefault();
-    console.log("hi");
+    
     const comment_text = document.getElementById('comment').value.trim();
     const commentbtn = document.getElementById('commentbtn');
     const character_id =commentbtn.getAttribute('data-characterId');
