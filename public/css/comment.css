@@ -1,0 +1,20 @@
+
+#commentgroupcontainer {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5vh;
+}
+
+#commentlabel {
+    display: flex;
+    font-family: 'MedievalSharp', cursive;
+    font-size: 4em;
+}
+
+#profilecardcomment {
+
+}
+
+#viewcommentcontainer {
+    display: flex;
+}

@@ -1,35 +1,42 @@
-
-<div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
-  <div class="card-header">{{user_name}}</div> {{! User's name}}
-  <div class="card-body">
-    <h5 class="card-title">Name: {{character_name}}</h5> {{! Created character's name}}
-    <p class="card-text">Background: {{character_background}} </p>
-    <p class="card-text">Race: {{character_race}} </p>
-    <p class="card-text">Alignment: {{character_alignment}} </p>
-    <p class="card-text">Class: {{character_class}} </p>
-    <p class="card-text">Strength: {{str}} </p>
-    <p class="card-text">Dexterity: {{dex}} </p>
-    <p class="card-text">Charisma: {{chr}} </p>
-    <p class="card-text">Consitution: {{cons}} </p>
-    <p class="card-text">Intelligence: {{int}} </p>
-    <p class="card-text">Wisdom: {{wis}} </p>
-    <a href="/profile"><button class="btn btn-sm btn-primary text-white" id="closecharbutton">Close</button></a>
-    <a href="/update/{{id}}"><button class="btn btn-sm btn-success text-white" id="closecharbutton">Update</button></a>
-  </div>
-</div>
-<div>
-  <form id="comment-form">
-    <label for="comment">Comment:</label>
-    <input class="form-input" type="text" id="comment" />
-    <div class="form-group">
-        <button id='commentbtn' class="btn btn-primary" type="submit" data-characterId="{{id}}">comment</button>
+<div id="viewcommentcontainer">
+  <div id="profilecardcomment">
+    <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
+      <div class="card-header">{{user_name}}</div> {{! User's name}}
+      <div class="card-body">
+        <h5 class="card-title">Name: {{character_name}}</h5> {{! Created character's name}}
+        <p class="card-text">Background: {{character_background}} </p>
+        <p class="card-text">Race: {{character_race}} </p>
+        <p class="card-text">Alignment: {{character_alignment}} </p>
+        <p class="card-text">Class: {{character_class}} </p>
+        <p class="card-text">Strength: {{str}} </p>
+        <p class="card-text">Dexterity: {{dex}} </p>
+        <p class="card-text">Charisma: {{chr}} </p>
+        <p class="card-text">Consitution: {{cons}} </p>
+        <p class="card-text">Intelligence: {{int}} </p>
+        <p class="card-text">Wisdom: {{wis}} </p>
+        <a href="/profile"><button class="btn btn-sm btn-primary text-white" id="closecharbutton">Close</button></a>
+        <a href="/update/{{id}}"><button class="btn btn-sm btn-success text-white" id="closecharbutton">Update</button></a>
+      </div>
     </div>
-  </form>
-   <div>
+  </div>
+
+  <div id="commentgroupcontainer">
+    <form id="comment-form">
+      <label for="comment" id="commentlabel">Comment:</label>
+      {{!-- brett has this working. Testing out the textarea control underneath. --}}
+      {{!-- <input class="form-input" type="text" id="comment" /> --}}
+      <textarea id="comment" rows='5' cols='32'></textarea>
+      <div class="form-group">
+          <button id='commentbtn' class="btn btn-warning" type="submit" data-characterId="{{id}}">comment</button>
+      </div>
+    </form>
+
+    <div>
       {{#each comments}}
         <p>{{comment_text}}</p>
       {{/each}}
     </div>
+  </div>
 </div>
 
 <script src="../js/comment.js"></script>
