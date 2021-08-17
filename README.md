@@ -1,14 +1,19 @@
 # DND Character creater:
 
-    Made by Brett Fleming, Jacob Beckfeld, J.J. Chosay, and Cody Vue.
     
     Link to deployable app! https://dnd-creator.herokuapp.com/
+
+![screenshot](./public/imgs/dnd-creator-homepage.jpg)
+
+
 
 ## Table of Contents
 
 * [Description](#Description)
 * [Usage](#Useage)
+* [Installation](#Installation)
 * [Node Modules](#Node_Modules)
+* [Contributing](#Contributing)
 * [Liscense](#license)
 
 
@@ -26,9 +31,12 @@
 
     The website uses MYSQL to create a datbase that stores the websites data for future use.
 
-## Useage
+## Usage
 
     The site is used to create a simple DND character and look up information about monsters.
+
+## Installation
+    Once you have cloned the repo down from GitHub, you will want to run npm install in the command line to install of the Node Mondules needed to run the application. 
 
 ## Node_Modules
 
@@ -47,6 +55,14 @@
 * [mysql2](https://www.npmjs.com/package/mysql2)
 
 * [sequelize](https://www.npmjs.com/package/sequelize)
+
+
+## Contributing
+
+- JacobBeckfeld
+- YueshiaVue
+- JChosay
+
 
 ## license 
 
